@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morel · Prepared by agents. Signed by you.</title>
+<meta name="description" content="Morel is the workplace for small offices and their AI crew. Agents do the legwork, a person signs every answer, and each one you approve becomes knowledge your whole office can reuse.">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="assets/agents/morel/head.webp" type="image/webp">
+<script>
+(function () {
+  var t = null; try { t = localStorage.getItem('morel-theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  document.documentElement.dataset.theme = t;
+  document.documentElement.classList.add('js');
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <nav class="nav__in wrap" aria-label="Main">
+    <a href="#top" class="brand" aria-label="Morel, back to top"><img src="assets/agents/morel/head.webp" alt="" width="26" height="26"><span>Morel</span></a>
+    <div class="nav__links">
+      <a href="#flow">How it works</a>
+      <a href="#crew">Crew</a>
+      <a href="#tree">Knowledge Tree</a>
+      <a href="#roof">Trust</a>
+    </div>
+    <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light appearance">
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+    <a href="#access" class="btn btn--ink btn--sm">Get early access</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section id="top" class="hero wrap">
+  <a href="#access" class="eyebrow">Early access for small offices in NRW <span>Join the pilot →</span></a>
+  <h1 class="hero__h">Prepared by agents.<br>Signed by you.</h1>
+  <p class="hero__sub">Morel is the workplace for small offices and their AI crew. Agents do the legwork, a person signs every answer, and each one you approve becomes knowledge your whole office can reuse.</p>
+  <div class="hero__ctas">
+    <a href="#access" class="btn btn--ink">Get early access</a>
+    <a href="#flow" class="btn btn--ghost" data-track="follow-request">Follow one request <span aria-hidden="true">↓</span></a>
+  </div>
+
+  <div class="product" data-reveal>
+    <div class="tabs" role="tablist" aria-label="Product views">
+      <button role="tab" id="tab-inbox" aria-controls="pane-inbox" aria-selected="false" tabindex="-1">Inbox</button>
+      <button role="tab" id="tab-approval" aria-controls="pane-approval" aria-selected="true">Approval</button>
+      <button role="tab" id="tab-tree" aria-controls="pane-tree" aria-selected="false" tabindex="-1">Knowledge Tree</button>
+    </div>
+    <div class="window">
+      <div class="window__bar">
+        <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="head has-dot"><img src="assets/agents/morel/head.webp" alt="Jarvis, needs you" width="28" height="28"></span>
+        <img src="assets/agents/verdigris/head.webp" alt="Research, working" width="28" height="28">
+        <img src="assets/agents/porcini/head.webp" alt="Outreach, ready" width="28" height="28">
+        <img src="assets/agents/oyster/head.webp" alt="Bookkeeping, working" width="28" height="28">
+        <span class="pill-sm">2 working</span>
+      </div>
+      <div class="window__body">
+        <aside class="side" aria-label="Requests">
+          <div class="side__head"><b>Requests</b><span class="mono dim3">Today</span></div>
+          <div class="seg" aria-hidden="true"><span class="on">All 5</span><span>Working 2</span><span class="attn">Needs you 1</span></div>
+          <ul class="rows">
+            <li class="on"><span class="head has-dot"><img src="assets/agents/morel/head.webp" alt="" width="30" height="30"></span><span class="rows__t"><b>Keller · burst pipe</b><small>Jarvis</small></span><span class="st attn">Needs you</span></li>
+            <li><img src="assets/agents/verdigris/head.webp" alt="" width="30" height="30"><span class="rows__t"><b>Brandt · renewal question</b><small>Research</small></span><span class="st">Working</span></li>
+            <li><img src="assets/agents/oyster/head.webp" alt="" width="30" height="30"><span class="rows__t"><b>March deadlines</b><small>Bookkeeping</small></span><span class="st">Working</span></li>
+            <li><img src="assets/agents/porcini/head.webp" alt="" width="30" height="30"><span class="rows__t"><b>Schulz · claim letter</b><small>Outreach</small></span><span class="st">Done</span></li>
+            <li><img src="assets/agents/verdigris/head.webp" alt="" width="30" height="30"><span class="rows__t"><b>Becker · address change</b><small>Research</small></span><span class="st">Ready</span></li>
+          </ul>
+        </aside>
+        <div class="panes">
+          <div class="pane" role="tabpanel" id="pane-inbox" aria-labelledby="tab-inbox" hidden>
+            <span class="mono dim3">Keller · burst pipe · routed by Jarvis</span>
+            <div class="msg"><small>Email from Martina Keller · 08:12</small>A pipe burst last night. Is burst-pipe water damage covered in my 2023 contract?</div>
+            <ol class="steps">
+              <li>Searched the Knowledge Tree for “burst pipe”</li>
+              <li>Opened customer file · M. Keller</li>
+              <li>Opened Home terms 2023 · skipped 2021 (superseded)</li>
+              <li>Fairy ring: 3 checks passed</li>
+              <li class="attn">Draft ready · waiting for A. Weber</li>
+            </ol>
+          </div>
+          <div class="pane" role="tabpanel" id="pane-approval" aria-labelledby="tab-approval">
+            <div class="pane__title"><b>Reply to Martina Keller</b><span class="badge-attn">● Needs you</span></div>
+            <div class="draft">
+              <div class="draft__text">Dear Ms Keller,<br><br>yes. Your 2023 home terms cover water damage from a burst pipe inside the building <span class="cite">1</span>. Please send us photos of the damage and the plumber's invoice, and we'll file the claim today.<br><br>Kind regards, A. Weber</div>
+              <div class="draft__src">
+                <span class="mono dim3">Sources</span>
+                <div class="src"><b>1 · Home terms 2023, § 4.2</b><span>Current version</span></div>
+                <div class="src src--old"><s>Home terms 2021</s><span>Superseded, not used</span></div>
+                <div class="src"><b>Advice record</b><span>Written by Research, ready to file</span></div>
+              </div>
+            </div>
+            <div class="actions">
+              <span class="fake-btn fake-btn--ink">Approve <kbd>⌘↵</kbd></span>
+              <span class="fake-btn">Send back with a note <kbd>B</kbd></span>
+              <small class="dim3">Prepared by Research · checked by 3 agents</small>
+            </div>
+          </div>
+          <div class="pane pane--tree" role="tabpanel" id="pane-tree" aria-labelledby="tab-tree" hidden>
+            <img class="tree tree--dark" src="assets/tree-dark.webp" alt="The Knowledge Tree: branches by topic, coloured leaves for approved answers" width="760" height="675" loading="lazy">
+            <img class="tree tree--light" src="assets/tree.webp" alt="The Knowledge Tree: branches by topic, coloured leaves for approved answers" width="760" height="675" loading="lazy">
+            <div class="leafcard"><small><i class="sw"></i>Branch · Coverage</small><b>Burst pipe · 2023 home terms</b><span>Approved by A. Weber · 21 Nov<br>Source: Home terms 2023, § 4.2</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="note">Product preview with fictional example data. The tree view is a real screen.</p>
+  </div>
+  <p class="for">Designed for insurance brokers, tax offices and small agencies in NRW, where answers must be right and someone must sign them.</p>
+</section>
+
+<!-- FLOW -->
+<section id="flow" class="flow wrap">
+  <h2 class="h2">The life of one request.<br><span class="dim3">Six steps. One signature.</span></h2>
+  <ol class="flow__list">
+    <li><a href="#c1"><span class="mono">1.0</span>It arrives</a></li>
+    <li><a href="#c2"><span class="mono">2.0</span>Agents prepare</a></li>
+    <li><a href="#c3"><span class="mono">3.0</span>A fairy ring checks</a></li>
+    <li><a href="#c4"><span class="mono attn">4.0</span>It needs you</a></li>
+    <li><a href="#c4"><span class="mono">5.0</span>You sign</a></li>
+    <li><a href="#tree"><span class="mono">6.0</span>Your office remembers</a></li>
+  </ol>
+</section>
+
+<!-- chapter rail: shows where you are while reading the chapters -->
+<nav class="rail" data-rail aria-label="Chapters" hidden>
+  <a href="#c1" data-for="c1">1.0 Arrives</a><a href="#c2" data-for="c2">2.0 Prepare</a><a href="#c3" data-for="c3">3.0 Check</a><a href="#c4" data-for="c4">4–5 Sign</a><a href="#tree" data-for="tree">6.0 Remember</a>
+</nav>
+
+<!-- 1.0 -->
+<section id="c1" class="chapter wrap" data-chapter>
+  <div class="chapter__copy" data-reveal>
+    <span class="mono dim3">1.0 — It arrives</span>
+    <h3 class="h3">Every question gets an owner.</h3>
+    <p class="body">Jarvis, your lead agent, reads what comes in and hands it to the right specialist. You see who has it, and what state it's in.</p>
+    <ul class="details">
+      <li><b>One owner</b><span>Every request has a named agent on it.</span></li>
+      <li><b>Six honest states</b><span>Ready, Thinking, Working, Needs you, Done, Failed.</span></li>
+      <li><b>No guessing</b><span>The state lives on the agent's face.</span></li>
+    </ul>
+  </div>
+  <div class="card states" data-reveal>
+    <div class="state"><img src="assets/agents/verdigris/head.webp" alt="" width="56" height="56"><b>Ready</b></div>
+    <div class="state"><span class="ring ring--dash"><img src="assets/agents/verdigris/head.webp" alt="" width="56" height="56"></span><b>Thinking</b></div>
+    <div class="state"><span class="ring ring--spin"><img src="assets/agents/verdigris/head.webp" alt="" width="56" height="56"></span><b>Working</b></div>
+    <div class="state state--attn"><span class="head has-dot"><img src="assets/agents/morel/head.webp" alt="" width="56" height="56"></span><b>Needs you</b></div>
+    <div class="state"><span class="head has-check"><img src="assets/agents/porcini/head.webp" alt="" width="56" height="56"></span><b>Done</b></div>
+    <div class="state"><span class="head has-fail"><img src="assets/agents/oyster/head.webp" alt="" width="56" height="56"></span><b>Failed</b></div>
+  </div>
+</section>
+
+<!-- 2.0 -->
+<section id="c2" class="chapter chapter--flip wrap" data-chapter>
+  <div class="chapter__copy" data-reveal>
+    <span class="mono dim3">2.0 — Agents prepare</span>
+    <h3 class="h3">The legwork, done before you look.</h3>
+    <p class="body">Research finds the file, opens the version of the terms that applies, and drafts the answer with its sources. Every step is written down.</p>
+    <ul class="details">
+      <li><b>Right version</b><span>The terms that apply, not the newest or the first found.</span></li>
+      <li><b>Sources attached</b><span>Every claim points to a clause.</span></li>
+      <li><b>Your access rules</b><span>Agents see only the folders you allow.</span></li>
+    </ul>
+  </div>
+  <div class="card log" data-reveal>
+    <div class="log__head"><img src="assets/agents/verdigris/head.webp" alt="" width="30" height="30"><b>Research</b><span class="dim3">· Working · 4 steps</span><span class="pill-sm">Office files · read only</span></div>
+    <ol>
+      <li><time class="mono">08:12</time><span>Searched the Knowledge Tree for “burst pipe” · <i class="dim3">no leaf yet</i></span></li>
+      <li><time class="mono">08:13</time><span>Opened customer file · M. Keller · policy HR-2023-0417</span></li>
+      <li><time class="mono">08:13</time><span>Opened Home terms <b>2023</b> · § 4.2 · <i class="dim3"><s>2021</s> superseded</i></span></li>
+      <li><time class="mono">08:15</time><span>Drafted reply and advice record · 1 source cited</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 3.0 -->
+<section id="c3" class="chapter wrap" data-chapter>
+  <div class="chapter__copy" data-reveal>
+    <span class="mono dim3">3.0 — A fairy ring checks</span>
+    <h3 class="h3">A second opinion, built in.</h3>
+    <p class="body">Before a draft reaches you, a small council of agents tries to break it. If they disagree, you see why.</p>
+  </div>
+  <div class="card council" data-reveal>
+    <div><img src="assets/agents/amanita/head.webp" alt="" width="32" height="32"><span><b>Claims reader</b>§ 4.2 covers burst pipes inside the building.</span><small>agrees</small></div>
+    <div><img src="assets/agents/oyster/head.webp" alt="" width="32" height="32"><span><b>Sceptic</b>Frost exclusion in § 4.5? Not relevant: it burst indoors.</span><small>agrees</small></div>
+    <div><img src="assets/agents/porcini/head.webp" alt="" width="32" height="32"><span><b>Compliance</b>Advice record needed. Drafted and attached.</span><small>agrees</small></div>
+  </div>
+</section>
+
+<!-- 4.0 + 5.0 -->
+<section id="c4" class="sign wrap" data-chapter>
+  <div class="sign__head" data-reveal>
+    <span class="mono attn">4.0 — It needs you · 5.0 — You sign</span>
+    <h3 class="h1-s">Agents can't approve.<br>Only people can.</h3>
+    <p class="body">Only what needs you comes forward, with its sources beside it. One click signs it with your name and the time. Anything else goes back with a note.</p>
+  </div>
+  <div class="sign__grid">
+    <div class="card" data-reveal>
+      <span class="mono dim3">Where it finds you</span>
+      <div class="toast"><span class="head has-dot"><img src="assets/agents/morel/head.webp" alt="" width="34" height="34"></span><span><b>Jarvis</b> · Reply to M. Keller is ready</span><span class="fake-btn fake-btn--ink fake-btn--sm">Review</span></div>
+      <p class="small-body">On Home, in the chat or as a toast. The request carries its own buttons wherever it shows up.</p>
+    </div>
+    <div class="card" data-reveal>
+      <span class="mono dim3">The signature</span>
+      <div class="sig"><span class="seal" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Approved by A. Weber</b><small class="dim3">21 Nov 2026 · 08:31</small></span></div>
+      <p class="small-body">No agent can press it. Approvals fail closed: if a person hasn't signed, nothing leaves.</p>
+    </div>
+    <div class="card" data-reveal>
+      <span class="mono dim3">The record</span>
+      <dl class="record"><dt>Asked</dt><dd>M. Keller · 08:12</dd><dt>Prepared</dt><dd>Research</dd><dt>Checked</dt><dd>Fairy ring · 3 agents</dd><dt>Source</dt><dd>Home terms 2023, § 4.2</dd><dt>Signed</dt><dd>A. Weber · 08:31</dd></dl>
+      <p class="small-body">Every step on record, for the day someone asks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6.0 the plate -->
+<section id="tree" class="remember wrap" data-chapter>
+  <div class="remember__head" data-reveal>
+    <div><span class="mono dim3">6.0 — Your office remembers</span><h3 class="h2">The second time, your office already knows.</h3></div>
+    <p class="body">Each approved answer becomes a leaf on your Knowledge Tree, on the branch for its topic. When a similar question comes in, your crew starts from it and says so.</p>
+  </div>
+  <figure class="plate" data-plate aria-label="Anatomy of the Knowledge Tree: leaves are approved answers, strands lead back to sources, the root is your office's own files, and agents read the tree but cannot add to it">
+    <div class="plate__top mono dim3"><span>Plate I — Arbor officii</span><span>Real view from the product</span></div>
+    <img class="plate__tree tree tree--dark" src="assets/tree-dark.webp" alt="" width="760" height="675" loading="lazy">
+    <img class="plate__tree tree tree--light" src="assets/tree.webp" alt="" width="760" height="675" loading="lazy">
+    <svg class="plate__lines" viewBox="0 0 1200 860" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M290 190 H 400 L 440 250"/><path d="M910 300 H 820 L 790 330"/><path d="M290 600 H 470 L 560 560"/><path d="M910 680 H 760 L 680 730"/>
+      <circle cx="440" cy="250" r="4"/><circle cx="790" cy="330" r="4"/><circle cx="560" cy="560" r="4"/><circle cx="680" cy="730" r="4"/>
+    </svg>
+    <div class="lbl lbl--a"><span class="mono dim3">A — Folium</span><b>Leaf</b><span>One approved answer. Its colour is its branch.</span></div>
+    <div class="lbl lbl--b"><span class="mono dim3">B — Filum</span><b>Strand</b><span>The path from an answer back to the clause it came from.</span></div>
+    <div class="lbl lbl--c"><span class="mono dim3">C — Radix</span><b>Root</b><span>Your office's own files: contracts, terms, letters.</span></div>
+    <div class="lbl lbl--d"><span class="mono dim3">D — Fungus</span><b>Agent</b><span>Reads the tree. Can suggest a leaf. Cannot add one.</span></div>
+    <video class="plate__m plate__m--1 clip" src="assets/agents/verdigris/clips/idle.webm" poster="assets/agents/verdigris/figure.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video class="plate__m plate__m--2 clip" src="assets/agents/morel/clips/idle.webm" poster="assets/agents/morel/figure.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <div class="newleaf"><small><i class="sw"></i>Branch · Coverage · new leaf</small><b>Burst pipe · 2023 home terms</b><span>Signed by A. Weber · 21 Nov</span></div>
+    <figcaption class="mono dim3">Fig. 1 — Tree rendered by the product from its own notes. Labels illustrative.</figcaption>
+  </figure>
+  <div class="timeline">
+    <div class="card card--sm" data-reveal><small class="dim3">21 Nov · first time</small><span>Keller asks. Research prepares, A. Weber signs. <b>New leaf.</b></span></div>
+    <div class="card card--sm" data-reveal><small class="dim3">Two weeks later</small><span>Brandt asks the same. The draft <b>cites the leaf.</b></span></div>
+    <div class="card card--sm" data-reveal><small class="dim3">Always</small><span>Agents suggest, people add. <b>It stays when you switch engines.</b></span></div>
+  </div>
+</section>
+
+<!-- CREW -->
+<section id="crew" class="crew wrap">
+  <div class="split-head" data-reveal>
+    <div><span class="mono dim3">The crew</span><h2 class="h2">A team with names,<br>not a chatbot.</h2></div>
+    <p class="body">Each agent has a face, a job, its own permissions and its own engine. Swap the engine any time. The agent, its rules and your tree stay put.</p>
+  </div>
+  <div class="card table-wrap" data-reveal>
+    <table>
+      <thead><tr><th class="mono">Agent</th><th class="mono">Job</th><th class="mono">May read</th><th class="mono">May write</th><th class="mono">Engine</th></tr></thead>
+      <tbody>
+        <tr><td><span class="who"><img src="assets/agents/morel/head.webp" alt="" width="30" height="30"><b>Jarvis</b></span></td><td>Lead. Routes every request.</td><td>Requests, crew status</td><td>Assignments</td><td><span class="chip">Claude</span></td></tr>
+        <tr><td><span class="who"><img src="assets/agents/verdigris/head.webp" alt="" width="30" height="30"><b>Research</b></span></td><td>Finds the file, version and clause.</td><td>Contracts, terms, tree</td><td>Drafts</td><td><span class="chip">Codex</span></td></tr>
+        <tr><td><span class="who"><img src="assets/agents/porcini/head.webp" alt="" width="30" height="30"><b>Outreach</b></span></td><td>Letters in your office's voice.</td><td>Approved answers, templates</td><td>Drafts</td><td><span class="chip">DeepSeek</span></td></tr>
+        <tr><td><span class="who"><img src="assets/agents/oyster/head.webp" alt="" width="30" height="30"><b>Bookkeeping</b></span></td><td>Deadlines and the paper trail.</td><td>Records, calendar</td><td>Reminders</td><td><span class="chip">Your choice</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Example setup. Nobody on the crew can send, sign or delete.</p>
+</section>
+
+<!-- ROOF -->
+<section id="roof" class="roof wrap">
+  <div data-reveal><span class="mono dim3">Under your roof</span><h2 class="h2">Built for work you're liable for.</h2></div>
+  <ul class="roof__grid" data-reveal>
+    <li><b>Human sign-off by design</b><span>Agents propose. People decide. Approvals fail closed.</span></li>
+    <li><b>Every step on record</b><span>Who prepared it, which sources, who signed, when.</span></li>
+    <li><b>Your data stays home</b><span>Designed to run in the EU or on your own machines.</span></li>
+    <li><b>Permissions per agent</b><span>Each agent sees only what you allow.</span></li>
+  </ul>
+  <p class="calm">Your knowledge belongs to your office, <span class="dim3">not to an AI vendor.</span></p>
+</section>
+
+<!-- ACCESS: two steps -->
+<section id="access" class="access">
+  <div class="access__in wrap">
+    <video class="access__m clip" src="assets/agents/morel/clips/idle.webm" poster="assets/agents/morel/figure.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <h2 class="h2">Start with one question.</h2>
+    <p class="body">Tell us the question your office answers most. We're shaping Morel with a small group of pilot offices around exactly that.</p>
+    <form class="form" data-form novalidate>
+      <div class="form__row">
+        <label class="sr" for="f-email">Work email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@your-office.de" required>
+        <button class="btn btn--ink" type="button" data-next>Continue</button>
+      </div>
+      <div class="form__more" data-more hidden>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-office">Office name</label><input id="f-office" name="office" autocomplete="organization" required></div>
+        <div class="field field--half"><label for="f-size">Office size</label><select id="f-size" name="size" required><option value="">Choose</option><option>1–2</option><option>3–15</option><option>16+</option></select></div>
+        <div class="field field--half"><label for="f-ind">Industry</label><select id="f-ind" name="industry" required><option value="">Choose</option><option>Insurance broker</option><option>Tax &amp; accounting</option><option>Other</option></select></div>
+        <div class="field"><label for="f-first">The question your office answers most <span class="dim3">(optional)</span></label><textarea id="f-first" name="first" rows="2"></textarea></div>
+        <label class="check"><input type="checkbox" name="consent" required><span>Morel may store these details to contact me about the pilot. See the <a href="privacy.html">privacy policy</a>.</span></label>
+        <button class="btn btn--ink btn--wide" type="submit">Get early access</button>
+      </div>
+      <p class="form__err" role="alert" data-err hidden>Please fill in the required fields and tick the box.</p>
+      <p class="note">TODO: connect a form backend. This preview stores nothing.</p>
+    </form>
+    <div class="done" data-done hidden tabindex="-1">
+      <video class="clip" src="assets/agents/porcini/clips/done.webm" poster="assets/agents/porcini/figure.webp" muted playsinline preload="none" aria-label="Outreach, a porcini mushroom agent, is done"></video>
+      <p class="h3">Thanks. We'll be in touch personally.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in wrap">
+    <span class="brand"><img src="assets/agents/morel/head.webp" alt="" width="22" height="22"><span>Morel</span></span>
+    <span>Bonn / NRW · Made in NRW.</span>
+    <span><a href="mailto:hello@example.com">Contact</a> · <a href="privacy.html">Privacy</a> · <a href="imprint.html">Imprint</a></span>
+    <span>EN / DE <span class="dim3">(German soon)</span></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
