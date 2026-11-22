@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-22
+- Branch `research-and-plans`: added `research/` screenshots (no longer ignored), `docs/RESEARCH_NOTES.md`, `docs/IMPROVEMENTS.md`, `docs/DEMO_PLAN.md`, `docs/BUILD_LOG.md`, and `README-HANS.md` (how to run, where things are, open decisions).
+
 ## 2026-11-21 (later)
 - Canvas: added design D (product story, Linear-style) and design E (D plus C's tree plate). A–C unchanged.
 - Site: `/` is now design E. The C build moved to `/c/` with its asset paths adjusted.

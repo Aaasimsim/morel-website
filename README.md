@@ -1,5 +1,7 @@
 # Morel website
 
+New here? Read [README-HANS.md](README-HANS.md) first. Research: [docs/RESEARCH_NOTES.md](docs/RESEARCH_NOTES.md) · Plan: [docs/IMPROVEMENTS.md](docs/IMPROVEMENTS.md)
+
 Static site, no build step, no dependencies, no third-party requests (fonts are self-hosted from the Deins Harness design system).
 
 - `/` — **Design E**: D's product story (one request, six chapters) with C's annotated Knowledge Tree plate. Dark and light follow the visitor's system setting; the moon/sun button switches and remembers it.
